@@ -26,7 +26,9 @@ const map = function(array, callback) {
 const words1 = ["ground", "control", "to", "major", "tom"];
 const words2 = ["ground", "control", "to", "major", "tom", "bowie"];
 const words3 = ["ground", "control", "to", "major", "bob"];
+const numbers = [1, 2, 3, 4, 5];
 
 assertArraysEqual(map(words1, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
 assertArraysEqual(map(words2, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
 assertArraysEqual(map(words3, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
+assertArraysEqual(map(numbers, nb => nb * 2), [ 2, 4, 6, 8, 10 ]);
