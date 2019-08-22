@@ -1,6 +1,6 @@
 // Assertion function
 const assertEqual = function(actual, expected) {
-  return (actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`));
+  return actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
 };
 
 // findKey Function
@@ -8,7 +8,7 @@ const findKey = function(object, callback) {
   for (let key in object) {
     if (callback(object[key])) return key;
   }
-}
+};
 
 
 // Tests
