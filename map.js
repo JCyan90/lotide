@@ -32,3 +32,5 @@ assertArraysEqual(map(words1, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]); //
 assertArraysEqual(map(words2, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]); // Fail
 assertArraysEqual(map(words3, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]); // Fail
 assertArraysEqual(map(numbers, nb => nb * 2), [ 2, 4, 6, 8, 10 ]); // Pass
+
+module.exports = map;

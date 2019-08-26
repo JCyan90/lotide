@@ -26,28 +26,10 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-// LETTERPOSITIONS FUNCTION USING FOR .. OF
-// const letterPositions = function(sentence) {
-//   const results = {};
-//   let index = 0;
-//   for (let letter of sentence) {
-//     if (letter !== " ") {
-//       if (results[letter]) {
-//         results[letter].push(index);
-//         index++;
-//       } else {
-//         results[letter] = [index];
-//         index++;
-//       }
-//     } else { 
-//       index++; 
-//     }
-//   }
-//   return results;
-// };
-
 assertArraysEqual(letterPositions("hello").h, [0]);
 assertArraysEqual(letterPositions("hello").e, [1]);
 assertArraysEqual(letterPositions("hello").l, [2, 3]);
 assertArraysEqual(letterPositions("hello").o, [4]);
 assertArraysEqual(letterPositions("hello hello").o, [4, 10]);
+
+module.exports = letterPositions;
