@@ -11,6 +11,6 @@ describe("#findKeyByValue", () => {
     assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
   });
   it("should return undefined for Scrubs", () => {
-    assert.strictEqual((findKeyByValue(bestTVShowsByGenre, "Scrubs"), undefined))
+    assert.strictEqual((findKeyByValue(bestTVShowsByGenre, "Scrubs"), undefined));
   });
 });

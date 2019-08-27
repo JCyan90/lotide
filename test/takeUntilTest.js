@@ -8,6 +8,6 @@ describe("#takeUntil", () => {
   });
   const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
   it("should return [ 'I\'ve', 'been', 'to', 'Hollywood' ] for x => x === ','", () => {
-    assert.deepEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ])
+    assert.deepEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
   });
 });
