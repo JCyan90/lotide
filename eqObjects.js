@@ -1,17 +1,18 @@
 const eqArrays = require("./eqArrays");
 
 const eqObjects = function(object1, object2) {
+  let output = true;
   const array1 = Object.keys(object1);
   const array2 = Object.keys(object2);
-  if (array1.length !== array2.length) return false;
-  for (let key in object1) {
-    // Uses the eqArrays function if values are arrays
-    if (Array.isArray(object1[key]) || Array.isArray(object2[key])) {
-      return (eqArrays(object1[key], object2[key]));
-    // If they are not arrays assumes the values are primitives and compare them
-    } else if (object1[key] !== object2[key]) return false;
+  if (array1.length !== array2.length) output = output && false;
+  else for (let key in object1) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+    output = output && (eqArrays(object1[key], object2[key]));
+    } else if (typeof(object1[key]) === "object" || typeof(object2[key]) === "object") {
+      output = output && eqObjects(object1[key], object2[key]);
+    } else if (object1[key] !== object2[key]) output = output && false;
   }
-  return true;
+  return output;
 };
 
 module.exports = eqObjects;
